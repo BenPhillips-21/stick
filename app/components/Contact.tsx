@@ -19,7 +19,7 @@ export default function Contact() {
     e.preventDefault();
     setStatus('submitting');
     try {
-      await fetch('/', {
+      await fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({ 'form-name': 'contact', ...fields }),
@@ -93,7 +93,6 @@ export default function Contact() {
             <form
               name="contact"
               method="POST"
-              data-netlify="true"
               onSubmit={handleSubmit}
               className="space-y-5"
             >
