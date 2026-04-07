@@ -7,6 +7,7 @@ import Services from './components/Services'
 import AreasOfService from './components/AreasOfService'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ContactModal from './components/ContactModal'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <AreasOfService />
       <Contact />
       <Footer />
+      <ContactModal />
     </>
   )
 }

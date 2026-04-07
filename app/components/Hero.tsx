@@ -1,3 +1,4 @@
+'use client'
 import NetlifyImage from './NetlifyImage';
 
 export default function Hero() {
@@ -14,12 +15,12 @@ export default function Hero() {
           <p className="text-gray-200 leading-relaxed mb-8">
             Whether it's a home upgrade, commercial fit-out, or a brand-new build, all services are managed from start to finish — making the process simple, efficient, and stress-free.
           </p>
-          <a
-            href="#contact"
+          <button
+            onClick={() => window.dispatchEvent(new Event('open-contact-modal'))}
             className="inline-block px-6 py-3 rounded font-semibold transition-colors bg-burnt-orange text-white hover:bg-soft-peach"
           >
             Get a Free Quote
-          </a>
+          </button>
         </div>
       </div>
       <div className="order-1 md:order-2 md:w-[45%] relative min-h-[300px] md:min-h-0">

@@ -30,22 +30,21 @@ const categories: ServiceCategory[] = [
       'Study rooms and kids room design & build',
     ],
     images: [
-      { src: '/stickBuildContent/doors/IMG_3522_result.avif', alt: 'Custom door installation' },
       { src: '/stickBuildContent/stairs/IMG_1166_result.avif', alt: 'Staircase detail' },
       { src: '/stickBuildContent/flooring/keep_result.avif', alt: 'Timber flooring' },
-      { src: '/stickBuildContent/doors/IMG_5123_result.avif', alt: 'Door installation' },
       { src: '/stickBuildContent/stairs/IMG_1409_result.avif', alt: 'Staircase construction' },
       { src: '/stickBuildContent/flooring/keeep_result.avif', alt: 'Flooring installation' },
       { src: '/stickBuildContent/stairs/9fb8f0a8-05e4-4e54-9d61-88f3902ea830_result.avif', alt: 'Balustrade detail' },
       { src: '/stickBuildContent/flooring/kep_result.avif', alt: 'Flooring finish' },
-      { src: '/stickBuildContent/doors/IMG_6472_result.avif', alt: 'Finished door install' },
       { src: '/stickBuildContent/stairs/IMG_1518_result.avif', alt: 'Stair stringers' },
       { src: '/stickBuildContent/flooring/keeepe_result.avif', alt: 'Hybrid flooring' },
       { src: '/stickBuildContent/stairs/IMG_4603_result.avif', alt: 'Stair balustrade' },
       { src: '/stickBuildContent/flooring/kp_result.avif', alt: 'Flooring layout' },
       { src: '/stickBuildContent/stairs/98400464-3da0-404a-b342-5cf52b9e810a_result.avif', alt: 'Staircase finish' },
       { src: '/stickBuildContent/flooring/keeeeeep_result.avif', alt: 'Floor boards' },
-      { src: '/stickBuildContent/stairs/e72c7703-e857-4f12-8966-72fad8951f93_result.avif', alt: 'Handrail detail' },
+      { src: '/stickBuildContent/new1_result.avif', alt: 'Interior wooden partition' },
+      { src: '/stickBuildContent/new2_result.avif', alt: 'Floor boards in bedroom' },
+      { src: '/stickBuildContent/new3_result.avif', alt: 'Floor boards in living room' },
     ],
     bg: 'bg-white',
   },
@@ -126,7 +125,6 @@ const categories: ServiceCategory[] = [
       { src: '/stickBuildContent/weatherboards/b72c4746-547c-4abc-a6ff-f3589e63a809_weatherboards.avif', alt: 'Corner weatherboard' },
       { src: '/stickBuildContent/weatherboards/c1d64050-2271-4853-87e6-e1148ed67812_weatherboards.avif', alt: 'Heritage cladding' },
       { src: '/stickBuildContent/weatherboards/c9e0c433-0393-4999-9456-75da5b321a1a_weatherboards.avif', alt: 'Board and batten' },
-      { src: '/stickBuildContent/weatherboards/e220ea7c-89a3-49e3-b81b-435a49e676ce_weatherboards.avif', alt: 'Eave restoration' },
     ],
     bg: 'bg-gray-50',
   },
@@ -175,12 +173,12 @@ export default function Services() {
                   </div>
                 ))}
               </div>
-              <a
-                href="#contact"
+              <button
+                onClick={() => window.dispatchEvent(new Event('open-contact-modal'))}
                 className="inline-block px-6 py-3 rounded font-semibold transition-colors bg-burnt-orange text-white hover:bg-soft-peach"
               >
                 Get a Free Quote
-              </a>
+              </button>
             </div>
             <ServiceGallery images={category.images} />
           </div>
