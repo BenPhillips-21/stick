@@ -15,6 +15,7 @@ interface ServiceCategory {
   services: string[];
   images: { src: string; alt: string }[];
   bg: string;
+  links?: { label: string; href: string }[];
 }
 
 const categories: ServiceCategory[] = [
@@ -58,6 +59,10 @@ const categories: ServiceCategory[] = [
       'Gates and entry solutions',
       'Balcony construction, tiling & repairs',
       'Garden sheds & custom outdoor structures',
+    ],
+    links: [
+      { label: 'Deck Builders Melbourne', href: '/deck-builders' },
+      { label: 'Fence & Gate Installation', href: '/fence-gate-installation' },
     ],
     images: [
       { src: '/stickBuildContent/deckingAndPergolas/IMG_4440_result.avif', alt: 'Merbau decking' },
@@ -116,6 +121,9 @@ const categories: ServiceCategory[] = [
       'Tile regrouting & repairs',
       'Fascia & eaves repairs (timber & aluminium)',
     ],
+    links: [
+      { label: 'Weatherboard Repair Melbourne', href: '/weatherboard-repair' },
+    ],
     images: [
       { src: '/stickBuildContent/weatherboards/IMG_4850_result.avif', alt: 'Weatherboard replacement' },
       { src: '/stickBuildContent/weatherboards/1db1df92-0f98-49c7-977d-28047b87e574_weatherboards.avif', alt: 'Weatherboard restoration' },
@@ -173,12 +181,26 @@ export default function Services() {
                   </div>
                 ))}
               </div>
-              <button
-                onClick={() => window.dispatchEvent(new Event('open-contact-modal'))}
-                className="inline-block px-6 py-3 rounded font-semibold transition-colors bg-burnt-orange text-white hover:bg-soft-peach"
-              >
-                Get a Free Quote
-              </button>
+              <div className="flex flex-wrap items-center gap-4">
+                <button
+                  onClick={() => window.dispatchEvent(new Event('open-contact-modal'))}
+                  className="inline-block px-6 py-3 rounded font-semibold transition-colors bg-burnt-orange text-white hover:bg-soft-peach"
+                >
+                  Get a Free Quote
+                </button>
+                {category.links?.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="inline-flex items-center gap-1 text-burnt-orange font-semibold hover:text-soft-peach transition-colors"
+                  >
+                    {link.label}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                      <path fillRule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clipRule="evenodd" />
+                    </svg>
+                  </a>
+                ))}
+              </div>
             </div>
             <ServiceGallery images={category.images} />
           </div>
