@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 const images = [
   '/stickBuildContent/deckingAndPergolas/IMG_5340_result.avif',
   '/stickBuildContent/deckingAndPergolas/IMG_5498_result.avif',
-  '/stickBuildContent/deckingAndPergolas/IMG_6061_result.avif',
+  '/stickBuildContent/deckingAndPergolas/deck_result.avif',
   '/stickBuildContent/deckingAndPergolas/IMG_6067_result.avif',
   '/stickBuildContent/deckingAndPergolas/IMG_6104_result.avif',
   '/stickBuildContent/deckingAndPergolas/IMG_6520_result.avif',
@@ -54,92 +54,48 @@ export default function DecksAndPergolas() {
             from the ground up. Trusted across Melbourne&apos;s inner west and heritage suburbs.
           </p>
 
-          {/* Phone — primary CTA */}
-          <a
-            href="tel:0468347781"
-            className="flex items-center gap-4 group mb-2 w-fit"
-          >
-            <div className="w-14 h-14 rounded-full bg-burnt-orange flex items-center justify-center shrink-0 group-hover:bg-soft-peach transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-white">
-                <path fillRule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clipRule="evenodd" />
-              </svg>
+          {/* Before & After pairs — above form (all 3 on desktop, vertical only on mobile) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div className="grid grid-cols-2 gap-2">
+              <div className="relative aspect-3/4 overflow-hidden rounded-xl">
+                <NetlifyImage src="/stickBuildContent/b4Afters/befooreVertical.avif" alt="Deck before restoration" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 50vw, 25vw" />
+                <span className="absolute top-2 left-2 bg-black/60 text-white text-xs font-semibold px-2 py-1 rounded">Before</span>
+              </div>
+              <div className="relative aspect-3/4 overflow-hidden rounded-xl">
+                <NetlifyImage src="/stickBuildContent/b4Afters/afterVertical.avif" alt="Deck after restoration" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 50vw, 25vw" />
+                <span className="absolute top-2 left-2 bg-burnt-orange/90 text-white text-xs font-semibold px-2 py-1 rounded">After</span>
+              </div>
             </div>
-            <div>
-              <p className="text-gray-400 text-xs uppercase tracking-widest mb-0.5">Call us now — free quote</p>
-              <span className="text-3xl md:text-4xl font-bold text-white group-hover:text-soft-peach transition-colors">
-                0468 347 781
-              </span>
+            <div className="hidden md:grid grid-cols-2 gap-2">
+              <div className="relative aspect-square overflow-hidden rounded-xl">
+                <NetlifyImage src="/stickBuildContent/b4Afters/beforeSquare.avif" alt="Deck before restoration" fill style={{ objectFit: 'cover' }} sizes="25vw" />
+                <span className="absolute top-2 left-2 bg-black/60 text-white text-xs font-semibold px-2 py-1 rounded">Before</span>
+              </div>
+              <div className="relative aspect-square overflow-hidden rounded-xl">
+                <NetlifyImage src="/stickBuildContent/b4Afters/afterSquare.avif" alt="Deck after restoration" fill style={{ objectFit: 'cover' }} sizes="25vw" />
+                <span className="absolute top-2 left-2 bg-burnt-orange/90 text-white text-xs font-semibold px-2 py-1 rounded">After</span>
+              </div>
             </div>
-          </a>
-          <p className="text-gray-400 text-sm mb-10">Same-day inspection available · No obligation</p>
+            <div className="hidden md:grid grid-cols-2 gap-2">
+              <div className="relative aspect-square overflow-hidden rounded-xl">
+                <NetlifyImage src="/stickBuildContent/deckingAndPergolas/deckingBefore_result.avif" alt="Decking before restoration" fill style={{ objectFit: 'cover' }} sizes="25vw" />
+                <span className="absolute top-2 left-2 bg-black/60 text-white text-xs font-semibold px-2 py-1 rounded">Before</span>
+              </div>
+              <div className="relative aspect-square overflow-hidden rounded-xl">
+                <NetlifyImage src="/stickBuildContent/deckingAndPergolas/deckingAfter_result.avif" alt="Decking after restoration" fill style={{ objectFit: 'cover' }} sizes="25vw" />
+                <span className="absolute top-2 left-2 bg-burnt-orange/90 text-white text-xs font-semibold px-2 py-1 rounded">After</span>
+              </div>
+            </div>
+          </div>
 
-          {/* Before & After pairs */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-            <div className="grid grid-cols-2 gap-2">
-              <div className="relative aspect-square overflow-hidden rounded-xl">
-                <NetlifyImage
-                  src="/stickBuildContent/b4Afters/beforeSquare.avif"
-                  alt="Deck before restoration"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  sizes="(max-width: 768px) 50vw, 17vw"
-                />
-                <span className="absolute top-2 left-2 bg-black/60 text-white text-xs font-semibold px-2 py-1 rounded">Before</span>
-              </div>
-              <div className="relative aspect-square overflow-hidden rounded-xl">
-                <NetlifyImage
-                  src="/stickBuildContent/b4Afters/afterSquare.avif"
-                  alt="Deck after restoration"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  sizes="(max-width: 768px) 50vw, 17vw"
-                />
-                <span className="absolute top-2 left-2 bg-burnt-orange/90 text-white text-xs font-semibold px-2 py-1 rounded">After</span>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-2">
-              <div className="relative aspect-square overflow-hidden rounded-xl">
-                <NetlifyImage
-                  src="/stickBuildContent/deckingAndPergolas/deckingBefore_result.avif"
-                  alt="Decking before restoration"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  sizes="(max-width: 768px) 50vw, 17vw"
-                />
-                <span className="absolute top-2 left-2 bg-black/60 text-white text-xs font-semibold px-2 py-1 rounded">Before</span>
-              </div>
-              <div className="relative aspect-square overflow-hidden rounded-xl">
-                <NetlifyImage
-                  src="/stickBuildContent/deckingAndPergolas/deckingAfter_result.avif"
-                  alt="Decking after restoration"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  sizes="(max-width: 768px) 50vw, 17vw"
-                />
-                <span className="absolute top-2 left-2 bg-burnt-orange/90 text-white text-xs font-semibold px-2 py-1 rounded">After</span>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-2">
-              <div className="relative aspect-3/4 overflow-hidden rounded-xl">
-                <NetlifyImage
-                  src="/stickBuildContent/b4Afters/befooreVertical.avif"
-                  alt="Deck before restoration"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  sizes="(max-width: 768px) 50vw, 17vw"
-                />
-                <span className="absolute top-2 left-2 bg-black/60 text-white text-xs font-semibold px-2 py-1 rounded">Before</span>
-              </div>
-              <div className="relative aspect-3/4 overflow-hidden rounded-xl">
-                <NetlifyImage
-                  src="/stickBuildContent/b4Afters/afterVertical.avif"
-                  alt="Deck after restoration"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  sizes="(max-width: 768px) 50vw, 17vw"
-                />
-                <span className="absolute top-2 left-2 bg-burnt-orange/90 text-white text-xs font-semibold px-2 py-1 rounded">After</span>
-              </div>
+          {/* Review band */}
+          <div className="max-w-xl mb-4 flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-soft-peach shrink-0 mt-0.5">
+              <path fillRule="evenodd" d="M4.804 21.644A6.707 6.707 0 0 0 6 21.75a6.721 6.721 0 0 0 3.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 0 1-.814 1.686.75.75 0 0 0 .44 1.223Z" clipRule="evenodd" />
+            </svg>
+            <div>
+              <p className="text-gray-300 text-xs italic leading-relaxed">&ldquo;Proper tradesman, knowledgeable and clear communications. He provides and explains several options before commencing work. Really happy with the service!!&rdquo;</p>
+              <p className="text-gray-500 text-xs mt-1">— Long Nguyen</p>
             </div>
           </div>
 
@@ -155,6 +111,28 @@ export default function DecksAndPergolas() {
       {/* Photo gallery */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="md:hidden grid grid-cols-1 gap-4 mb-6">
+            <div className="grid grid-cols-2 gap-2">
+              <div className="relative aspect-square overflow-hidden rounded-xl">
+                <NetlifyImage src="/stickBuildContent/b4Afters/beforeSquare.avif" alt="Deck before restoration" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 50vw, 25vw" />
+                <span className="absolute top-2 left-2 bg-black/60 text-white text-xs font-semibold px-2 py-1 rounded">Before</span>
+              </div>
+              <div className="relative aspect-square overflow-hidden rounded-xl">
+                <NetlifyImage src="/stickBuildContent/b4Afters/afterSquare.avif" alt="Deck after restoration" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 50vw, 25vw" />
+                <span className="absolute top-2 left-2 bg-burnt-orange/90 text-white text-xs font-semibold px-2 py-1 rounded">After</span>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-2">
+              <div className="relative aspect-square overflow-hidden rounded-xl">
+                <NetlifyImage src="/stickBuildContent/deckingAndPergolas/deckingBefore_result.avif" alt="Decking before restoration" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 50vw, 25vw" />
+                <span className="absolute top-2 left-2 bg-black/60 text-white text-xs font-semibold px-2 py-1 rounded">Before</span>
+              </div>
+              <div className="relative aspect-square overflow-hidden rounded-xl">
+                <NetlifyImage src="/stickBuildContent/deckingAndPergolas/deckingAfter_result.avif" alt="Decking after restoration" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 50vw, 25vw" />
+                <span className="absolute top-2 left-2 bg-burnt-orange/90 text-white text-xs font-semibold px-2 py-1 rounded">After</span>
+              </div>
+            </div>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {images.map((src, i) => (
               <div key={i} className="relative aspect-4/3 overflow-hidden rounded-lg bg-gray-100">
