@@ -20,9 +20,6 @@ export const metadata: Metadata = {
 };
 
 const images = [
-  '/stickBuildContent/deckingAndPergolas/deckingAfter_result.avif',
-  '/stickBuildContent/deckingAndPergolas/deckingBefore_result.avif',
-  '/stickBuildContent/deckingAndPergolas/IMG_4440_result.avif',
   '/stickBuildContent/deckingAndPergolas/IMG_5340_result.avif',
   '/stickBuildContent/deckingAndPergolas/IMG_5498_result.avif',
   '/stickBuildContent/deckingAndPergolas/IMG_6061_result.avif',
@@ -43,62 +40,124 @@ export default function DecksAndPergolas() {
     <>
       <Navbar />
 
-      {/* Hero — contact form & phone number above the fold */}
+      {/* Hero — headline + phone + before/afters + form */}
       <section className="bg-navy pt-6 pb-14 md:pt-10 md:pb-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <p className="text-soft-peach font-semibold uppercase tracking-wide text-sm mb-3">
+            Melbourne Deck &amp; Pergola Specialists
+          </p>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
+            Deck &amp; Pergola<br className="hidden sm:block" /> Builders Melbourne
+          </h1>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-2xl">
+            New builds, repairs, or full restorations — we handle decks and pergolas
+            from the ground up. Trusted across Melbourne&apos;s inner west and heritage suburbs.
+          </p>
 
-            {/* Left — headline + phone */}
+          {/* Phone — primary CTA */}
+          <a
+            href="tel:0468347781"
+            className="flex items-center gap-4 group mb-2 w-fit"
+          >
+            <div className="w-14 h-14 rounded-full bg-burnt-orange flex items-center justify-center shrink-0 group-hover:bg-soft-peach transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-white">
+                <path fillRule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clipRule="evenodd" />
+              </svg>
+            </div>
             <div>
-              <p className="text-soft-peach font-semibold uppercase tracking-wide text-sm mb-3">
-                Melbourne Deck &amp; Pergola Specialists
-              </p>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
-                Deck &amp; Pergola<br className="hidden sm:block" /> Builders Melbourne
-              </h1>
-              <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-lg">
-                New builds, repairs, or full restorations — we handle decks and pergolas
-                from the ground up. Trusted across Melbourne&apos;s inner west and heritage suburbs.
-              </p>
-
-              {/* Phone — primary CTA */}
-              <a
-                href="tel:0468347781"
-                className="flex items-center gap-4 group mb-6"
-              >
-                <div className="w-14 h-14 rounded-full bg-burnt-orange flex items-center justify-center shrink-0 group-hover:bg-soft-peach transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-white">
-                    <path fillRule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-gray-400 text-xs uppercase tracking-widest mb-0.5">Call us now — free quote</p>
-                  <span className="text-3xl md:text-4xl font-bold text-white group-hover:text-soft-peach transition-colors">
-                    0468 347 781
-                  </span>
-                </div>
-              </a>
-
-              <p className="text-gray-400 text-sm mb-8">Same-day inspection available · No obligation</p>
+              <p className="text-gray-400 text-xs uppercase tracking-widest mb-0.5">Call us now — free quote</p>
+              <span className="text-3xl md:text-4xl font-bold text-white group-hover:text-soft-peach transition-colors">
+                0468 347 781
+              </span>
             </div>
+          </a>
+          <p className="text-gray-400 text-sm mb-10">Same-day inspection available · No obligation</p>
 
-            {/* Right — inline contact form */}
-            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-2xl">
-              <h2 className="text-xl font-bold text-navy mb-1">Get a Free Quote Today</h2>
-              <p className="text-gray-500 text-sm mb-5">We&apos;ll get back to you within the hour.</p>
-              <DeckPergolaContactForm />
+          {/* Before & After pairs */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+            <div className="grid grid-cols-2 gap-2">
+              <div className="relative aspect-square overflow-hidden rounded-xl">
+                <NetlifyImage
+                  src="/stickBuildContent/b4Afters/beforeSquare.avif"
+                  alt="Deck before restoration"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 768px) 50vw, 17vw"
+                />
+                <span className="absolute top-2 left-2 bg-black/60 text-white text-xs font-semibold px-2 py-1 rounded">Before</span>
+              </div>
+              <div className="relative aspect-square overflow-hidden rounded-xl">
+                <NetlifyImage
+                  src="/stickBuildContent/b4Afters/afterSquare.avif"
+                  alt="Deck after restoration"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 768px) 50vw, 17vw"
+                />
+                <span className="absolute top-2 left-2 bg-burnt-orange/90 text-white text-xs font-semibold px-2 py-1 rounded">After</span>
+              </div>
             </div>
+            <div className="grid grid-cols-2 gap-2">
+              <div className="relative aspect-square overflow-hidden rounded-xl">
+                <NetlifyImage
+                  src="/stickBuildContent/deckingAndPergolas/deckingBefore_result.avif"
+                  alt="Decking before restoration"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 768px) 50vw, 17vw"
+                />
+                <span className="absolute top-2 left-2 bg-black/60 text-white text-xs font-semibold px-2 py-1 rounded">Before</span>
+              </div>
+              <div className="relative aspect-square overflow-hidden rounded-xl">
+                <NetlifyImage
+                  src="/stickBuildContent/deckingAndPergolas/deckingAfter_result.avif"
+                  alt="Decking after restoration"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 768px) 50vw, 17vw"
+                />
+                <span className="absolute top-2 left-2 bg-burnt-orange/90 text-white text-xs font-semibold px-2 py-1 rounded">After</span>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-2">
+              <div className="relative aspect-3/4 overflow-hidden rounded-xl">
+                <NetlifyImage
+                  src="/stickBuildContent/b4Afters/befooreVertical.avif"
+                  alt="Deck before restoration"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 768px) 50vw, 17vw"
+                />
+                <span className="absolute top-2 left-2 bg-black/60 text-white text-xs font-semibold px-2 py-1 rounded">Before</span>
+              </div>
+              <div className="relative aspect-3/4 overflow-hidden rounded-xl">
+                <NetlifyImage
+                  src="/stickBuildContent/b4Afters/afterVertical.avif"
+                  alt="Deck after restoration"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 768px) 50vw, 17vw"
+                />
+                <span className="absolute top-2 left-2 bg-burnt-orange/90 text-white text-xs font-semibold px-2 py-1 rounded">After</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact form */}
+          <div className="max-w-xl bg-white rounded-2xl p-6 md:p-8 shadow-2xl">
+            <h2 className="text-xl font-bold text-navy mb-1">Get a Free Quote Today</h2>
+            <p className="text-gray-500 text-sm mb-5">We&apos;ll get back to you within the hour.</p>
+            <DeckPergolaContactForm />
           </div>
         </div>
       </section>
 
       {/* Photo gallery */}
-      <section className="py-14 bg-white">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl font-bold text-navy mb-6">Our Recent Work</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {images.map((src, i) => (
-              <div key={i} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-100">
+              <div key={i} className="relative aspect-4/3 overflow-hidden rounded-lg bg-gray-100">
                 <NetlifyImage
                   src={src}
                   alt={`Deck and pergola Melbourne example ${i + 1}`}
