@@ -44,7 +44,7 @@ export default function DecksAndPergolas() {
       <Navbar />
 
       {/* Hero — contact form & phone number above the fold */}
-      <section className="bg-navy py-14 md:py-20">
+      <section className="bg-navy pt-6 pb-14 md:pt-10 md:pb-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
 
@@ -80,16 +80,6 @@ export default function DecksAndPergolas() {
               </a>
 
               <p className="text-gray-400 text-sm mb-8">Same-day inspection available · No obligation</p>
-
-              {/* Trust signals */}
-              <div className="grid grid-cols-3 gap-3">
-                {['Free Quotes', 'Quality Timber', 'Melbourne-Wide'].map((label) => (
-                  <div key={label} className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-3">
-                    <span className="text-soft-peach font-bold">✓</span>
-                    <span className="text-white text-sm font-medium">{label}</span>
-                  </div>
-                ))}
-              </div>
             </div>
 
             {/* Right — inline contact form */}
@@ -135,7 +125,7 @@ export default function DecksAndPergolas() {
             we have the skills and materials to fix it right — the first time.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             <div>
               <h3 className="text-xl font-bold text-navy mb-4">Why Decks Fail</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
