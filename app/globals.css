@@ -16,3 +16,12 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes shine {
+  0%   { transform: translateX(-100%) skewX(-20deg); }
+  100% { transform: translateX(250%) skewX(-20deg); }
+}
+
+.animate-shine {
+  animation: shine 2.8s ease-in-out infinite;
+}

@@ -8,7 +8,7 @@ function encode(data: Record<string, string>) {
     .join('&');
 }
 
-export default function DeckPergolaContactForm() {
+export default function DeckPergolaContactForm({ onSuccess }: { onSuccess?: () => void } = {}) {
   const [fields, setFields] = useState({ name: '', phone: '', email: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
@@ -26,6 +26,7 @@ export default function DeckPergolaContactForm() {
         body: encode({ 'form-name': 'decks-pergolas', ...fields }),
       });
       setStatus('success');
+      onSuccess?.();
     } catch {
       setStatus('error');
     }
