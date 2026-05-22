@@ -43,8 +43,19 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-blue-900 pt-6 text-center text-gray-400 text-sm">
-          © 2025 Stick Build Construction. All rights reserved.
+        <div className="border-t border-blue-900 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-gray-400">
+          <span>© 2025 Stick Build Construction. All rights reserved.</span>
+          <span className="text-xs text-gray-600">
+            Website built by{' '}
+            <a
+              href="https://solidsimplesites.com.au"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-400 transition-colors hover:underline underline-offset-2"
+            >
+              Solid Simple Sites
+            </a>
+          </span>
         </div>
       </div>
     </footer>
