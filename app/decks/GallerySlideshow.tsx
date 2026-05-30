@@ -7,8 +7,6 @@ const images = [
   '/stickBuildContent/deckingAndPergolas/IMG_5498_result.avif',
   '/stickBuildContent/deckingAndPergolas/deck_result.avif',
   '/stickBuildContent/deckingAndPergolas/IMG_6067_result.avif',
-  '/stickBuildContent/deckingAndPergolas/IMG_6104_result.avif',
-  '/stickBuildContent/deckingAndPergolas/IMG_6520_result.avif',
 ];
 
 export default function GallerySlideshow() {
