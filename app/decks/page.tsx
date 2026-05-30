@@ -9,13 +9,13 @@ import GallerySlideshow from './GallerySlideshow';
 import ReviewsCarousel from './ReviewsCarousel';
 
 export const metadata: Metadata = {
-  title: 'Deck & Pergola Builders Melbourne | Building, Repair & Restoration | Stick Build Construction',
+  title: 'Deck Builders Melbourne | Building, Repair & Restoration | Stick Build Construction',
   description:
-    'Melbourne specialists in deck building, deck restoration, pergola construction and pergola repair. Free quotes, quality Merbau and MGP10 H3 timber, same-day inspection available. Call 0468 347 781.',
+    'Melbourne deck specialists delivering new builds, restoration and repairs. Free quotes, quality Merbau and MGP10 H3 timber, same-day inspection available. Call 0468 347 781.',
   openGraph: {
-    title: 'Deck & Pergola Builders Melbourne | Building, Repair & Restoration',
+    title: 'Deck Builders Melbourne | Building, Repair & Restoration',
     description:
-      'Melbourne specialists in deck building, deck restoration, pergola construction and pergola repair. Free quotes, quality timber, same-day inspection.',
+      'Melbourne deck specialists delivering new builds, restoration and repairs. Free quotes, quality timber, same-day inspection.',
     locale: 'en_AU',
     type: 'website',
   },
@@ -35,7 +35,7 @@ const steps = [
   {
     num: '03',
     title: 'Build on site',
-    desc: "Our qualified team builds your deck or pergola, typically within 1–2 weeks. We leave the site clean and tidy each day.",
+    desc: "Our qualified team builds your deck, typically within 1–2 weeks. We leave the site clean and tidy each day.",
   },
   {
     num: '04',
@@ -46,23 +46,23 @@ const steps = [
 
 const faqs = [
   {
-    q: 'How much does a deck or pergola cost in Melbourne?',
-    a: 'Most deck builds range from $5,000 to $30,000+ depending on size, material, and complexity. Pergolas typically start from $3,000. The only way to give you a real number is a free on-site quote — ranges are just guesses.',
+    q: 'How much does a deck cost in Melbourne?',
+    a: 'Most deck builds range from $5,000 to $30,000+ depending on size, material, and complexity. The only way to give you a real number is a free on-site quote — ranges are just guesses.',
   },
   {
     q: 'Are your prices fixed?',
     a: "Yes. We provide a written, itemised quote upfront. That's the number you pay — no variations, no surprise invoices at the end.",
   },
   {
-    q: 'Do I need council permits for a deck or pergola?',
+    q: 'Do I need council permits for a deck?',
     a: "In Victoria, decks over 800mm above ground level typically require a building permit. Heritage overlays can add extra requirements. We handle all the paperwork and fees — you don't need to deal with council at all.",
   },
   {
     q: 'How long does the build take?',
-    a: 'Most decks and pergolas take 1–2 weeks on site. If permits are required, allow an additional 2–4 weeks for the approval process before we start.',
+    a: 'Most decks take 1–2 weeks on site. If permits are required, allow an additional 2–4 weeks for the approval process before we start.',
   },
   {
-    q: 'Do you repair existing decks and pergolas, or only build new?',
+    q: 'Do you repair existing decks, or only build new?',
     a: "Both. We assess what you've got and recommend the most cost-effective approach — sometimes that's targeted repairs, sometimes a partial or full rebuild. We'll be straight with you either way.",
   },
   {
@@ -79,7 +79,7 @@ const faqs = [
   },
 ];
 
-export default function DecksAndPergolas() {
+export default function Decks() {
   return (
     <>
       <Navbar />
@@ -88,7 +88,7 @@ export default function DecksAndPergolas() {
       <section className="bg-navy pt-10 pb-16 md:pt-16 md:pb-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-            Melbourne Deck &amp; Pergola Builders. 
+            Melbourne Deck Builders.
           </h1>
           <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto md:mx-0">
             New builds, repairs, and full restorations. We handle design, permits, and construction
@@ -173,7 +173,7 @@ export default function DecksAndPergolas() {
               <div className="relative aspect-4/3 rounded-2xl overflow-hidden mb-3">
               <NetlifyImage
                 src="/stickBuildContent/deckingAndPergolas/deck_result.avif"
-                alt="Deck and pergola construction Melbourne"
+                alt="Deck construction Melbourne"
                 fill
                 style={{ objectFit: 'cover' }}
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -191,7 +191,7 @@ export default function DecksAndPergolas() {
                   don&apos;t have to deal with council at all.
                 </p>
                 <p>
-                  Whether it&apos;s a brand-new deck, a pergola restoration, or a full structural rebuild,
+                  Whether it&apos;s a brand-new deck or a full structural rebuild,
                   you&apos;ll know exactly what you&apos;re getting and when it will be done.
                 </p>
               </div>
@@ -251,7 +251,7 @@ export default function DecksAndPergolas() {
               },
               {
                 title: '5+ years. Hundreds of jobs.',
-                body: 'Decks and pergolas across Melbourne\'s heritage suburbs. We understand older homes and how to work with them.',
+                body: 'Decks across Melbourne\'s heritage suburbs. We understand older homes and how to work with them.',
                 backedBy: '5+ years trading history and a photo portfolio of completed jobs.',
                 icon: (
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-burnt-orange">

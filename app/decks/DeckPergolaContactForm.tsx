@@ -75,7 +75,7 @@ export default function DeckPergolaContactForm({ onSuccess }: { onSuccess?: () =
         <label htmlFor="dp-message" className="block text-sm font-medium text-gray-700 mb-1">Tell Us About Your Project</label>
         <textarea
           id="dp-message" name="message" rows={4} required
-          value={fields.message} onChange={handleChange} placeholder="Deck repair, new deck, pergola build..."
+          value={fields.message} onChange={handleChange} placeholder="Deck repair, new deck build, restoration..."
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-burnt-orange focus:border-transparent text-gray-900 placeholder-gray-400 resize-none"
         />
       </div>
