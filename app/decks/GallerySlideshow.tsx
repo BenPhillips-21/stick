@@ -7,6 +7,8 @@ const images = [
   '/stickBuildContent/deckingAndPergolas/IMG_5498_result.avif',
   '/stickBuildContent/deckingAndPergolas/deck_result.avif',
   '/stickBuildContent/deckingAndPergolas/IMG_6067_result.avif',
+  '/stickBuildContent/b4Afters/afterVertical.avif',
+  '/stickBuildContent/b4Afters/afterSquare.avif',
 ];
 
 export default function GallerySlideshow() {
@@ -15,7 +17,7 @@ export default function GallerySlideshow() {
   useEffect(() => {
     const id = setInterval(() => {
       setCurrent((c) => (c + 1) % images.length);
-    }, 7000);
+    }, 4000);
     return () => clearInterval(id);
   }, []);
 

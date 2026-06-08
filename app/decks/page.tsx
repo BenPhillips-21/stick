@@ -159,40 +159,18 @@ export default function Decks() {
         </div>
       </section>
 
-      {/* Problem / Solution */}
+      {/* Gallery + testimonial */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6 leading-tight">
-                Getting a deck built shouldn&apos;t feel like a gamble.
-              </h2>
-              <div className="relative aspect-4/3 rounded-2xl overflow-hidden mb-3">
-              <NetlifyImage
-                src="/stickBuildContent/deckingAndPergolas/deck_result.avif"
-                alt="Deck construction Melbourne"
-                fill
-                style={{ objectFit: 'cover' }}
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
-                <p>
-                  Most homeowners struggle to find a builder they can actually trust. You&apos;re worried
-                  about quotes blowing out mid-job, the build dragging on for months, or council
-                  paperwork nobody bothers to explain.
-                </p>
-                <p>
-                  We do things differently. Fixed pricing written into your contract. A single dedicated
-                  team from first visit to final walkthrough. And we handle every permit — so you
-                  don&apos;t have to deal with council at all.
-                </p>
-                <p>
-                  Whether it&apos;s a brand-new deck or a full structural rebuild,
-                  you&apos;ll know exactly what you&apos;re getting and when it will be done.
-                </p>
-              </div>
-            </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-2">
+            Real decks. Real Melbourne homes.
+          </h2>
+          <p className="text-gray-500 mb-8">Here&apos;s some of our recent work.</p>
+          <div className="mb-8">
+            <GallerySlideshow />
+          </div>
+          <div className="mb-10 max-w-md">
+            <ReviewsCarousel />
           </div>
         </div>
       </section>
@@ -218,83 +196,6 @@ export default function Decks() {
         </div>
       </section>
 
-      {/* Why choose us */}
-      <section className="py-16 md:py-20 bg-navy">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center md:text-left">
-            Why Melbourne homeowners choose Stick Build.
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              {
-                title: 'Your quote is the price you pay.',
-                body: 'No mid-project surprise costs, no upsells. Every quote is fixed, detailed and written down.',
-                backedBy: 'fully itemised quotes and a written fixed-price contract.',
-                icon: (
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-burnt-orange">
-                    <path fillRule="evenodd" d="M5.25 2.25a3 3 0 0 0-3 3v4.318a3 3 0 0 0 .879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 0 0 5.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 0 0-2.122-.879H5.25ZM6.375 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clipRule="evenodd" />
-                  </svg>
-                ),
-              },
-              {
-                title: 'Fully insured, fully qualified.',
-                body: 'We carry full public liability insurance. Certificates available before work begins.',
-                backedBy: 'public liability insurance with certificates available on request.',
-                icon: (
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-burnt-orange">
-                    <path fillRule="evenodd" d="M12.516 2.17a.75.75 0 0 0-1.032 0 11.209 11.209 0 0 1-7.877 3.08.75.75 0 0 0-.722.515A12.74 12.74 0 0 0 2.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 0 0 .374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 0 0-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08Zm3.094 8.016a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
-                  </svg>
-                ),
-              },
-              {
-                title: '5+ years. Hundreds of jobs.',
-                body: 'Decks across Melbourne\'s heritage suburbs. We understand older homes and how to work with them.',
-                backedBy: '5+ years trading history and a photo portfolio of completed jobs.',
-                icon: (
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-burnt-orange">
-                    <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clipRule="evenodd" />
-                  </svg>
-                ),
-              },
-              {
-                title: 'Satisfaction guaranteed.',
-                body: 'We walk through the finished job together. Not right? We fix it before you sign off.',
-                backedBy: 'written satisfaction guarantee included in every contract.',
-                icon: (
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-burnt-orange">
-                    <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
-                  </svg>
-                ),
-              },
-            ].map(({ title, body, backedBy, icon }) => (
-              <div key={title} className="bg-gray-900 rounded-2xl p-6 flex flex-col items-center text-center">
-                <div className="mb-4">{icon}</div>
-                <h3 className="font-bold text-white text-lg mb-3 leading-snug">{title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-1">{body}</p>
-                <p className="text-burnt-orange text-xs italic leading-relaxed">Backed by: {backedBy}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery + testimonial */}
-      <section className="py-16 md:py-20 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-2">
-            Real decks. Real Melbourne homes.
-          </h2>
-          <p className="text-gray-500 mb-8">Here&apos;s some of our recent work.</p>
-          <div className="mb-8">
-            <GallerySlideshow />
-          </div>
-          <div className="mb-10 max-w-md">
-            <ReviewsCarousel />
-          </div>
-          <DeckPergolaButtons />
-        </div>
-      </section>
-
       {/* FAQ */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
@@ -314,31 +215,6 @@ export default function Decks() {
                 </summary>
                 <p className="px-5 pb-5 text-gray-600 text-sm leading-relaxed">{a}</p>
               </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Promise */}
-      <section className="py-20 md:py-28 bg-navy">
-        <div className="max-w-sm mx-auto px-6 text-center">
-          <div className="flex justify-center mb-8">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-14 h-14 text-burnt-orange">
-              <path fillRule="evenodd" d="M12.516 2.17a.75.75 0 0 0-1.032 0 11.209 11.209 0 0 1-7.877 3.08.75.75 0 0 0-.722.515A12.74 12.74 0 0 0 2.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 0 0 .374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 0 0-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08Zm3.094 8.016a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
-            </svg>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-16">Our promise to you.</h2>
-          <div className="space-y-14">
-            {[
-              { title: 'Fixed price', body: 'The quote you get is the price you pay. Written into the contract.' },
-              { title: 'Fully covered', body: 'Fully insured and qualified. Certificates on request.' },
-              { title: 'Satisfaction guaranteed', body: "If it isn't right at handover, we fix it at our cost. No arguments." },
-              { title: 'No obligation', body: "The quote is free. There's no pressure to go ahead." },
-            ].map(({ title, body }) => (
-              <div key={title}>
-                <h3 className="text-burnt-orange font-bold uppercase tracking-widest text-sm mb-3">{title}</h3>
-                <p className="text-gray-300 leading-relaxed">{body}</p>
-              </div>
             ))}
           </div>
         </div>
