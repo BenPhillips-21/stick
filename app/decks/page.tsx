@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import NetlifyImage from '../components/NetlifyImage';
 import DeckPergolaContactForm from './DeckPergolaContactForm';
@@ -82,10 +81,8 @@ const faqs = [
 export default function Decks() {
   return (
     <>
-      <Navbar />
-
       {/* Hero */}
-      <section className="bg-navy pt-10 pb-16 md:pt-16 md:pb-24">
+      <section className="bg-navy mt-7 pt-10 pb-16 md:pt-16 md:pb-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
             Melbourne Deck Builders.
@@ -100,7 +97,7 @@ export default function Decks() {
             <div className="flex-1">
               <div className="relative aspect-3/4 rounded-xl overflow-hidden">
                 <NetlifyImage
-                  src="/stickBuildContent/b4Afters/befooreVertical.avif"
+                  src="/stickBuildContent/deckBefore.avif"
                   alt="Deck before restoration"
                   fill
                   style={{ objectFit: 'cover' }}
@@ -114,7 +111,7 @@ export default function Decks() {
             <div className="flex-1">
               <div className="relative aspect-3/4 rounded-xl overflow-hidden">
                 <NetlifyImage
-                  src="/stickBuildContent/b4Afters/afterVertical.avif"
+                  src="/stickBuildContent/deckAfter.avif"
                   alt="Deck after restoration"
                   fill
                   style={{ objectFit: 'cover' }}
@@ -382,6 +379,17 @@ export default function Decks() {
       </section>
       <Footer />
       <DeckPergolaModal />
+
+      {/* Sticky call button — mobile only */}
+      <a
+        href="tel:0468347781"
+        className="md:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-center gap-3 bg-burnt-orange active:bg-orange-700 text-white font-bold text-base py-3.5 shadow-[0_4px_20px_rgba(0,0,0,0.25)] cursor-pointer select-none"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 shrink-0 animate-phone-buzz">
+          <path fillRule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clipRule="evenodd" />
+        </svg>
+        Call Now For A Free Quote
+      </a>
     </>
   );
 }

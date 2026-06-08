@@ -25,3 +25,15 @@ html {
 .animate-shine {
   animation: shine 2.8s ease-in-out infinite;
 }
+
+@keyframes phone-buzz {
+  0%, 90%, 100% { transform: rotate(0deg); }
+  92%           { transform: rotate(-12deg); }
+  94%           { transform: rotate(12deg); }
+  96%           { transform: rotate(-8deg); }
+  98%           { transform: rotate(8deg); }
+}
+
+.animate-phone-buzz {
+  animation: phone-buzz 4s ease-in-out infinite;
+}
