@@ -102,16 +102,16 @@ export default function Decks() {
             <div className="text-center md:text-left">
               <div className="text-[5vw] md:text-2xl lg:text-3xl mb-6">
                 <h1 className="text-[1.85em] font-bold text-white leading-tight">
-                  <span className="block">Your <span className="text-burnt-orange">Dream Deck</span></span>
-                  <span className="block">Built In <span className="text-burnt-orange">72 Hours</span></span>
+                  <span className="block">Your <span style={{ color: '#FF7F00' }}>Dream Deck</span></span>
+                  <span className="block">Built In <span style={{ color: '#FF7F00' }}>72 Hours</span></span>
                 </h1>
-                <p className="text-[0.82em] text-gray-300 font-medium leading-tight mt-1.5">
-                  (<span className="underline decoration-burnt-orange decoration-2">Without</span> Postpones, Permits or Paperwork)
+                <p className="text-[0.82em] text-white font-medium leading-tight mt-1.5">
+                  (<span className="underline decoration-bright-orange decoration-2">Without</span> Postpones, Permits or Paperwork)
                 </p>
               </div>
 
               <div className="-mx-4 sm:-mx-6 px-4 sm:px-6 bg-white py-4 mb-6 md:bg-transparent md:mx-0 md:px-0 md:py-0 md:mb-0">
-                <p className="text-gray-700 md:text-black text-base md:text-lg leading-relaxed mb-4 md:mb-8 max-w-lg mx-auto md:mx-0">
+                <p className="text-gray-700 md:text-white text-base md:text-lg leading-relaxed mb-4 md:mb-8 max-w-lg mx-auto md:mx-0">
                   Whether it&apos;s the peak of summer and you&apos;re hosting a monster BBQ; or it&apos;s the depth of winter and you&apos;re roasting marshmallows over the firepit... You will be eating and sleeping on these elegant, hand crafted timber decks.
                 </p>
 
