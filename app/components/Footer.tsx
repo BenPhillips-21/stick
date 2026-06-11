@@ -44,7 +44,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-blue-900 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-gray-400">
-          <span>© 2025 Stick Build Construction. All rights reserved.</span>
+          <span>© Stick Build Construction. Established 2026. All rights reserved.</span>
           <span className="text-xs text-gray-600">
             Website built by{' '}
             <a
