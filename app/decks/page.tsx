@@ -111,7 +111,7 @@ export default function Decks() {
               </div>
 
               <div className="-mx-4 sm:-mx-6 px-4 sm:px-6 bg-white py-4 mb-6 md:bg-transparent md:mx-0 md:px-0 md:py-0 md:mb-0">
-                <p className="text-gray-700 md:text-gray-300 text-base md:text-lg leading-relaxed mb-4 md:mb-8 max-w-lg mx-auto md:mx-0">
+                <p className="text-gray-700 md:text-black text-base md:text-lg leading-relaxed mb-4 md:mb-8 max-w-lg mx-auto md:mx-0">
                   Whether it&apos;s the peak of summer and you&apos;re hosting a monster BBQ; or it&apos;s the depth of winter and you&apos;re roasting marshmallows over the firepit... You will be eating and sleeping on these elegant, hand crafted timber decks.
                 </p>
 
@@ -206,7 +206,7 @@ export default function Decks() {
       </section>
 
       {/* Quote form + before/afters */}
-      <section id="quote" className="py-14 bg-gray-50">
+      <section id="quote" className="py-4 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
 
           {/* Contact form */}
@@ -257,12 +257,11 @@ export default function Decks() {
       </section>
 
       {/* Gallery + testimonial */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-10 md:py-10 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-3">
             Real decks. Real Melbourne homes.
           </h2>
-          <p className="text-gray-500 mb-8">Here&apos;s some of our recent work.</p>
           <div className="mb-8">
             <GallerySlideshow />
           </div>
@@ -308,12 +307,12 @@ export default function Decks() {
       </section>
 
       {/* Process */}
-      <section className="py-16 md:py-20 bg-gray-50">
+      <section className="py-10 md:py-10 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-12">
             How we build your deck in 4 steps.
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-7">
             {steps.map(({ num, title, desc }) => (
               <div key={num} className="bg-white rounded-2xl p-6 shadow-sm flex flex-col items-center">
                 <div className="w-12 h-12 rounded-full bg-burnt-orange text-white font-bold text-lg flex items-center justify-center mb-4 shrink-0">
@@ -353,6 +352,13 @@ export default function Decks() {
       </section>
 
       {/* Final CTA */}
+      <section className="py-16 md:py-20 bg-gray-50 text-center">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <DeckPergolaButtons size="large" />
+        </div>
+      </section>
+
+      {/* Final CTA (old form) */}
       {/* <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="max-w-xl">
