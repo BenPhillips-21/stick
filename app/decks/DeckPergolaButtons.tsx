@@ -6,8 +6,7 @@ export default function DeckPergolaButtons({ variant = 'dark', size = 'default',
     : 'relative overflow-hidden inline-flex items-center gap-2 bg-burnt-orange text-white px-6 py-4 rounded-lg font-bold hover:bg-soft-peach transition-colors shadow-[0_0_20px_4px_rgba(204,76,4,0.5)] hover:shadow-[0_0_28px_6px_rgba(204,76,4,0.65)]';
 
   function handleClick() {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: 'cta_clicked', cta_location: location });
+    window.gtag('event', 'cta_clicked', { cta_location: location });
     window.dispatchEvent(new Event('open-deck-pergola-modal'));
   }
 

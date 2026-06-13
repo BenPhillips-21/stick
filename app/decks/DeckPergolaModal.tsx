@@ -10,8 +10,7 @@ export default function DeckPergolaModal() {
     function handleOpen() {
       wasSubmitted.current = false;
       setOpen(true);
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: 'quote_modal_opened' });
+      window.gtag('event', 'quote_modal_opened');
     }
     window.addEventListener('open-deck-pergola-modal', handleOpen);
     return () => window.removeEventListener('open-deck-pergola-modal', handleOpen);
@@ -19,8 +18,7 @@ export default function DeckPergolaModal() {
 
   function handleClose() {
     if (!wasSubmitted.current) {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: 'quote_modal_abandoned' });
+      window.gtag('event', 'quote_modal_abandoned');
     }
     setOpen(false);
   }

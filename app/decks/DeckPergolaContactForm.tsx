@@ -3,7 +3,10 @@
 import { useState, FormEvent } from 'react';
 
 declare global {
-  interface Window { dataLayer: Record<string, unknown>[]; }
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+    dataLayer: unknown[];
+  }
 }
 
 function encode(data: Record<string, string>) {
@@ -30,8 +33,8 @@ export default function DeckPergolaContactForm({ onSuccess }: { onSuccess?: () =
         body: encode({ 'form-name': 'deck-quote', ...fields }),
       });
       setStatus('success');
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: 'deck_quote_submitted' });
+      window.gtag('event', 'conversion', { send_to: 'AW-18189854724/ulvKCIzdg74cEITQzOFD' });
+      window.gtag('event', 'deck_quote_submitted');
       onSuccess?.();
     } catch {
       setStatus('error');
