@@ -23,7 +23,7 @@ export default function DeckPergolaContactForm({ onSuccess }: { onSuccess?: () =
       await fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({ 'form-name': 'decks-pergolas', ...fields }),
+        body: encode({ 'form-name': 'deck-quote', ...fields }),
       });
       setStatus('success');
       onSuccess?.();
@@ -45,8 +45,8 @@ export default function DeckPergolaContactForm({ onSuccess }: { onSuccess?: () =
   }
 
   return (
-    <form name="decks-pergolas" method="POST" onSubmit={handleSubmit} className="space-y-4">
-      <input type="hidden" name="form-name" value="decks-pergolas" />
+    <form name="deck-quote" method="POST" onSubmit={handleSubmit} className="space-y-4">
+      <input type="hidden" name="form-name" value="deck-quote" />
       <div>
         <label htmlFor="dp-name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
         <input

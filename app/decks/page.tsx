@@ -23,23 +23,23 @@ export const metadata: Metadata = {
 const steps = [
   {
     num: '01',
-    title: 'Free on-site quote',
-    desc: "We visit your property, assess the space, and give you a clear, itemised quote — usually within the hour. No obligation.",
+    title: 'Same-day quote',
+    desc: "We visit your property, assess the space, and hand you a clear itemised quote — usually within the hour. You're approved and locked in before we leave.",
   },
   {
     num: '02',
-    title: 'Design & permits',
-    desc: "We handle all council drawings and permit applications where required. You approve everything before a single board is cut.",
+    title: 'Permits sorted overnight',
+    desc: "We handle all council drawings and permit applications. For standard decks under 800mm, we can begin within 24 hours of your sign-off — no waiting around.",
   },
   {
     num: '03',
-    title: 'Build on site',
-    desc: "Our qualified team builds your deck, typically within 1–2 weeks. We leave the site clean and tidy each day.",
+    title: 'Built in 72 hours',
+    desc: "Our crew arrives with every board pre-cut and every fixing ready. Most standard decks are fully built within 72 hours of breaking ground — clean site left each day.",
   },
   {
     num: '04',
-    title: 'Final walkthrough',
-    desc: "We walk you through the finished job together. Not happy with something? We fix it before you sign off. Guaranteed.",
+    title: 'Walk it. Love it. Sign off.',
+    desc: "We walk you through together the moment we're done. Anything not right, we fix on the spot before you sign off. That's the 72-hour promise — start to finish, no excuses.",
   },
 ];
 
@@ -102,7 +102,7 @@ export default function Decks() {
             <div className="text-center md:text-left">
               <div className="text-[5vw] md:text-2xl lg:text-3xl mb-6">
                 <h1 className="text-[1.85em] font-bold text-white leading-tight">
-                  <span className="block">Your <span style={{ color: '#FF7F00' }}>Dream Deck</span></span>
+                  <span className="block"><span className="underline decoration-4" style={{ textDecorationColor: '#FF7F00' }}>Your</span> <span style={{ color: '#FF7F00' }}>Dream Deck</span></span>
                   <span className="block">Built In <span style={{ color: '#FF7F00' }}>72 Hours</span></span>
                 </h1>
                 <p className="text-[0.82em] text-white font-medium leading-tight mt-1.5">
@@ -310,7 +310,7 @@ export default function Decks() {
       <section className="py-10 md:py-10 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-navy mb-12">
-            How we build your deck in 4 steps.
+            How we build your deck in 72 hours.
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-7">
             {steps.map(({ num, title, desc }) => (
