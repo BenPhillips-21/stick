@@ -2,6 +2,10 @@
 
 import { useState, FormEvent } from 'react';
 
+declare global {
+  interface Window { dataLayer: Record<string, unknown>[]; }
+}
+
 function encode(data: Record<string, string>) {
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -26,6 +30,8 @@ export default function DeckPergolaContactForm({ onSuccess }: { onSuccess?: () =
         body: encode({ 'form-name': 'deck-quote', ...fields }),
       });
       setStatus('success');
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'deck_quote_submitted' });
       onSuccess?.();
     } catch {
       setStatus('error');

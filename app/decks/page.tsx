@@ -158,7 +158,7 @@ export default function Decks() {
                 ))}
               </ul>
 
-              <DeckPergolaButtons variant="light" />
+              <DeckPergolaButtons variant="light" location="hero" />
 
               <div className="flex items-center gap-2 mt-4 mb-1 justify-center md:justify-start">
                 <div className="flex gap-1">
@@ -323,7 +323,7 @@ export default function Decks() {
               </div>
             ))}
           </div>
-          <DeckPergolaButtons />
+          <DeckPergolaButtons location="process" />
         </div>
       </section>
 
@@ -354,7 +354,7 @@ export default function Decks() {
       {/* Final CTA */}
       <section className="py-16 md:py-20 bg-gray-50 text-center">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <DeckPergolaButtons size="large" />
+          <DeckPergolaButtons size="large" location="final" />
         </div>
       </section>
 
