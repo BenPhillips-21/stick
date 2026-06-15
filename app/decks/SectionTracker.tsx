@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 const sections = [
   { id: 'section-gallery', name: 'gallery' },
   { id: 'section-process', name: 'process' },
+  { id: 'section-features', name: 'features' },
   { id: 'section-faq', name: 'faq' },
   { id: 'section-final-cta', name: 'final_cta' },
 ];

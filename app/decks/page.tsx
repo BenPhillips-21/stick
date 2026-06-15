@@ -22,6 +22,13 @@ export const metadata: Metadata = {
   },
 };
 
+const features = [
+  'Hidden screws resulting in barefoot-friendly surface with zero risk of a stubbed toe.',
+  'Moisture and stain resistant timber prevents wood rot, eliminating grueling constant maintenance.',
+  'Splinter free finish so the kids can play and you can relax.',
+  'Fade-proof colour technology that keeps the wood looking brand new for decades.',
+];
+
 const steps = [
   {
     num: '01',
@@ -110,10 +117,9 @@ export default function Decks() {
 
               <ul className="space-y-3 mb-4 flex flex-col items-start">
                 {[
-                  'Fixed price — no surprises',
-                  'Council permits handled for you',
-                  'Fully licensed & insured',
-                  'Heritage suburb specialists',
+                  'Building permits handled for you so you don\'t need to spend your time on bureaucratic headaches',
+                  'Fixed pricing so you don\'t need to worry about any surprises.',
+                  'Fully Licensed & Insured Builders: So you get guaranteed structural compliance, which means absolutely zero legal or physical risk to your property or your back pocket.',
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-gray-200">
                     <span className="w-5 h-5 rounded-full bg-burnt-orange flex items-center justify-center shrink-0">
@@ -228,7 +234,7 @@ export default function Decks() {
       <section id="section-gallery" className="py-10 md:py-10 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-navy mb-3">
-            Real decks. Real Melbourne homes.
+            Real Decks. Real Melbourne Homes.
           </h2>
           <div className="mb-8">
             <GallerySlideshow />
@@ -278,7 +284,7 @@ export default function Decks() {
       <section id="section-process" className="py-10 md:py-10 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-navy mb-12">
-            How we build your deck in 72 hours.
+            How We Build Your Deck In 72 Hours.
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-7">
             {steps.map(({ num, title, desc }) => (
@@ -295,11 +301,32 @@ export default function Decks() {
         </div>
       </section>
 
+      {/* Features */}
+      <section id="section-features" className="py-16 md:py-20 bg-navy">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">
+            Features You Will Love About Your New Deck
+          </h2>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
+            {features.map((feature) => (
+              <li key={feature} className="flex items-start gap-3 text-gray-300 text-base leading-relaxed">
+                <span className="w-5 h-5 rounded-full bg-burnt-orange flex items-center justify-center shrink-0 mt-0.5">
+                  <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section id="section-faq" className="py-16 md:py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-navy mb-10">
-            Questions Melbourne homeowners ask us.
+            Questions Melbourne Homeowners Ask Us.
           </h2>
           <FaqAccordion />
         </div>
