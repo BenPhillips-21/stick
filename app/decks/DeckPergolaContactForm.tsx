@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 
 declare global {
   interface Window {
@@ -9,15 +9,26 @@ declare global {
   }
 }
 
+export type FormFields = { name: string; phone: string; email: string; message: string };
+export type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
+
 function encode(data: Record<string, string>) {
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
 }
 
-export default function DeckPergolaContactForm({ onSuccess }: { onSuccess?: () => void } = {}) {
-  const [fields, setFields] = useState({ name: '', phone: '', email: '', message: '' });
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+export default function DeckPergolaContactForm({
+  fields,
+  onFieldChange,
+  status,
+  onStatusChange,
+}: {
+  fields: FormFields;
+  onFieldChange: (name: string, value: string) => void;
+  status: FormStatus;
+  onStatusChange: (s: FormStatus) => void;
+}) {
   const hasStarted = useRef(false);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
@@ -25,23 +36,22 @@ export default function DeckPergolaContactForm({ onSuccess }: { onSuccess?: () =
       hasStarted.current = true;
       window.gtag('event', 'form_started', { form_name: 'deck_quote' });
     }
-    setFields((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    onFieldChange(e.target.name, e.target.value);
   }
 
   async function handleSubmit(e: { preventDefault(): void }) {
     e.preventDefault();
-    setStatus('submitting');
+    onStatusChange('submitting');
     try {
       await fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({ 'form-name': 'deck-quote', ...fields }),
       });
-      setStatus('success');
       window.gtag('event', 'deck_quote_submitted');
-      onSuccess?.();
+      onStatusChange('success');
     } catch {
-      setStatus('error');
+      onStatusChange('error');
     }
   }
 
