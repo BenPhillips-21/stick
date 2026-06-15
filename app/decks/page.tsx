@@ -7,6 +7,7 @@ import DeckPergolaModal from './DeckPergolaModal';
 import DeckPergolaButtons from './DeckPergolaButtons';
 import GallerySlideshow from './GallerySlideshow';
 import FaqAccordion from './FaqAccordion';
+import SectionTracker from './SectionTracker';
 
 export const metadata: Metadata = {
   title: 'Deck Builders Melbourne | Building, Repair & Restoration | Stick Build Construction',
@@ -224,7 +225,7 @@ export default function Decks() {
       </section>
 
       {/* Gallery + testimonial */}
-      <section className="py-10 md:py-10 bg-white">
+      <section id="section-gallery" className="py-10 md:py-10 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-navy mb-3">
             Real decks. Real Melbourne homes.
@@ -274,7 +275,7 @@ export default function Decks() {
       </section>
 
       {/* Process */}
-      <section className="py-10 md:py-10 bg-gray-50">
+      <section id="section-process" className="py-10 md:py-10 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-navy mb-12">
             How we build your deck in 72 hours.
@@ -295,7 +296,7 @@ export default function Decks() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 md:py-20 bg-white">
+      <section id="section-faq" className="py-16 md:py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-navy mb-10">
             Questions Melbourne homeowners ask us.
@@ -305,7 +306,7 @@ export default function Decks() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 md:py-20 bg-gray-50 text-center">
+      <section id="section-final-cta" className="py-16 md:py-20 bg-gray-50 text-center">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <DeckPergolaButtons size="large" location="final" />
         </div>
@@ -327,6 +328,7 @@ export default function Decks() {
       </section> */}
       <Footer />
       <DeckPergolaModal />
+      <SectionTracker />
 
     </>
   );
