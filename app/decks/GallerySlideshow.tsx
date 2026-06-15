@@ -45,7 +45,10 @@ export default function GallerySlideshow() {
         {images.map((_, i) => (
           <button
             key={i}
-            onClick={() => setCurrent(i)}
+            onClick={() => {
+              setCurrent(i);
+              window.gtag('event', 'gallery_navigated', { direction: 'dot', image_index: i });
+            }}
             className={`w-2 h-2 rounded-full transition-colors ${i === current ? 'bg-white' : 'bg-white/40'}`}
             aria-label={`Go to image ${i + 1}`}
           />
@@ -54,7 +57,10 @@ export default function GallerySlideshow() {
 
       {/* Prev / Next */}
       <button
-        onClick={() => setCurrent((c) => (c - 1 + images.length) % images.length)}
+        onClick={() => {
+          setCurrent((c) => (c - 1 + images.length) % images.length);
+          window.gtag('event', 'gallery_navigated', { direction: 'prev' });
+        }}
         className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 text-white flex items-center justify-center hover:bg-black/60 transition-colors"
         aria-label="Previous image"
       >
@@ -63,7 +69,10 @@ export default function GallerySlideshow() {
         </svg>
       </button>
       <button
-        onClick={() => setCurrent((c) => (c + 1) % images.length)}
+        onClick={() => {
+          setCurrent((c) => (c + 1) % images.length);
+          window.gtag('event', 'gallery_navigated', { direction: 'next' });
+        }}
         className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 text-white flex items-center justify-center hover:bg-black/60 transition-colors"
         aria-label="Next image"
       >

@@ -55,7 +55,6 @@ export default function RootLayout({
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-7VEL6BXMB4');
-          gtag('config', 'AW-18189854724');
         ` }} />
       </head>
       <body className="min-h-full flex flex-col">

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, FormEvent } from 'react';
+import { useState, useRef } from 'react';
 
 declare global {
   interface Window {
@@ -18,12 +18,17 @@ function encode(data: Record<string, string>) {
 export default function DeckPergolaContactForm({ onSuccess }: { onSuccess?: () => void } = {}) {
   const [fields, setFields] = useState({ name: '', phone: '', email: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const hasStarted = useRef(false);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    if (!hasStarted.current) {
+      hasStarted.current = true;
+      window.gtag('event', 'form_started', { form_name: 'deck_quote' });
+    }
     setFields((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  async function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: { preventDefault(): void }) {
     e.preventDefault();
     setStatus('submitting');
     try {
@@ -33,7 +38,6 @@ export default function DeckPergolaContactForm({ onSuccess }: { onSuccess?: () =
         body: encode({ 'form-name': 'deck-quote', ...fields }),
       });
       setStatus('success');
-      window.gtag('event', 'conversion', { send_to: 'AW-18189854724/ulvKCIzdg74cEITQzOFD' });
       window.gtag('event', 'deck_quote_submitted');
       onSuccess?.();
     } catch {
