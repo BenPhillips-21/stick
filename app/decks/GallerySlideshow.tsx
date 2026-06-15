@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import NetlifyImage from '../components/NetlifyImage';
 
 const images = [
@@ -14,6 +14,13 @@ const images = [
 
 export default function GallerySlideshow() {
   const [current, setCurrent] = useState(0);
+  const hasNavigated = useRef(false);
+
+  function trackNavigation(direction: string, imageIndex?: number) {
+    if (hasNavigated.current) return;
+    hasNavigated.current = true;
+    window.gtag('event', 'gallery_navigated', { direction, ...(imageIndex !== undefined && { image_index: imageIndex }) });
+  }
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -47,7 +54,7 @@ export default function GallerySlideshow() {
             key={i}
             onClick={() => {
               setCurrent(i);
-              window.gtag('event', 'gallery_navigated', { direction: 'dot', image_index: i });
+              trackNavigation('dot', i);
             }}
             className={`w-2 h-2 rounded-full transition-colors ${i === current ? 'bg-white' : 'bg-white/40'}`}
             aria-label={`Go to image ${i + 1}`}
@@ -59,7 +66,7 @@ export default function GallerySlideshow() {
       <button
         onClick={() => {
           setCurrent((c) => (c - 1 + images.length) % images.length);
-          window.gtag('event', 'gallery_navigated', { direction: 'prev' });
+          trackNavigation('prev');
         }}
         className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 text-white flex items-center justify-center hover:bg-black/60 transition-colors"
         aria-label="Previous image"
@@ -71,7 +78,7 @@ export default function GallerySlideshow() {
       <button
         onClick={() => {
           setCurrent((c) => (c + 1) % images.length);
-          window.gtag('event', 'gallery_navigated', { direction: 'next' });
+          trackNavigation('next');
         }}
         className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 text-white flex items-center justify-center hover:bg-black/60 transition-colors"
         aria-label="Next image"
