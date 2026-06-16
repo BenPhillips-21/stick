@@ -49,6 +49,7 @@ export default function DeckPergolaContactForm({
         body: encode({ 'form-name': 'deck-quote', ...fields }),
       });
       window.gtag('event', 'deck_quote_submitted');
+      window.gtag('event', 'conversion', { send_to: 'AW-18189854724/ulvKCIzdg74cEITQzOFD' });
       onStatusChange('success');
     } catch {
       onStatusChange('error');
