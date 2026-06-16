@@ -132,7 +132,7 @@ export default function Decks() {
                 ))}
               </ul>
 
-              <DeckPergolaButtons variant="light" location="hero" />
+              <DeckPergolaButtons variant="light" location="hero" align="left" />
 
               <div className="flex items-center gap-2 mt-4 mb-1 justify-center md:justify-start">
                 <div className="flex gap-1">

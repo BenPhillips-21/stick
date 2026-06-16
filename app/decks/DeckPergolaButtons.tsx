@@ -13,7 +13,7 @@ export default function DeckPergolaButtons({ variant = 'dark', size = 'default',
   }
 
   return (
-    <div className={`flex flex-wrap gap-3 ${align === 'left' ? 'justify-start' : 'justify-center'}`}>
+    <div className={`flex flex-wrap gap-3 justify-center ${align === 'left' ? 'md:justify-start' : ''}`}>
       <button onClick={handleClick} className={btnClass}>
         <span className="relative z-10">Get My Free Quote</span>
         <span className="absolute inset-0 bg-linear-to-r from-transparent via-white/30 to-transparent animate-shine" />
