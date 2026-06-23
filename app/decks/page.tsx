@@ -77,11 +77,11 @@ export default function Decks() {
             <div className="text-center md:text-left">
               <div className="text-[5vw] md:text-2xl lg:text-3xl mb-6">
                 <h1 className="text-[1.85em] font-bold text-white leading-tight">
-                  <span className="block"><span className="underline decoration-4" style={{ textDecorationColor: '#FF7F00' }}>Your</span> <span style={{ color: '#FF7F00' }}>Dream Deck</span></span>
+                  <span className="block"><span>Your</span> <span style={{ color: '#FF7F00' }}>Dream Deck</span></span>
                   <span className="block">Built In <span style={{ color: '#FF7F00' }}>72 Hours</span></span>
                 </h1>
                 <p className="text-[0.82em] text-white font-medium leading-tight mt-1.5">
-                  (<span className="underline decoration-bright-orange decoration-2">Without</span> Postpones, Permits or Paperwork)
+                  (<span>Without</span> Postpones, Permits or Paperwork)
                 </p>
               </div>
 
@@ -97,14 +97,14 @@ export default function Decks() {
                     src="/stickBuildContent/deckBefore.avif"
                     alt="Deck before restoration"
                     fill
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'cover', transform: 'scale(1.25)', transformOrigin: 'center' }}
                     sizes="45vw"
                   />
                   <span className="absolute bottom-2 left-2 bg-black/60 text-white text-xs font-semibold px-2 py-1 rounded">Before</span>
                 </div>
                 <div className="flex-1 relative aspect-3/4 rounded-xl overflow-hidden">
                   <NetlifyImage
-                    src="/stickBuildContent/deckAfter.avif"
+                    src="/stickBuildContent/newAfter.avif"
                     alt="Deck after restoration"
                     fill
                     style={{ objectFit: 'cover' }}
@@ -158,14 +158,14 @@ export default function Decks() {
                   src="/stickBuildContent/deckBefore.avif"
                   alt="Deck before restoration"
                   fill
-                  style={{ objectFit: 'cover' }}
+                  style={{ objectFit: 'cover', transform: 'scale(1.15)', transformOrigin: 'center' }}
                   sizes="360px"
                 />
                 <span className="absolute bottom-3 left-3 bg-black/60 text-white text-xs font-semibold px-3 py-1.5 rounded-full">Before</span>
               </div>
               <div className="relative w-full aspect-3/4 rounded-2xl overflow-hidden shadow-2xl">
                 <NetlifyImage
-                  src="/stickBuildContent/deckAfter.avif"
+                  src="/stickBuildContent/newAfter.avif"
                   alt="Deck after restoration"
                   fill
                   style={{ objectFit: 'cover' }}
