@@ -105,7 +105,7 @@ export default function Decks() {
                 </div>
                 <div className="flex-1 relative aspect-3/4 rounded-xl overflow-hidden">
                   <NetlifyImage
-                    src="/stickBuildContent/newAfter_result.avif"
+                    src="/stickBuildContent/newAfter.avif"
                     alt="Deck after restoration"
                     fill
                     preload
@@ -168,7 +168,7 @@ export default function Decks() {
               </div>
               <div className="relative w-full aspect-3/4 rounded-2xl overflow-hidden shadow-2xl">
                 <NetlifyImage
-                  src="/stickBuildContent/newAfter_result.avif"
+                  src="/stickBuildContent/newAfter.avif"
                   alt="Deck after restoration"
                   fill
                   preload
