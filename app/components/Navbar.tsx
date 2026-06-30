@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
       <a href="/" className="relative flex items-center" style={{ height: 75, width: 220 }}>
           <NetlifyImage
-            src="/stickBuildContent/stickBuildConstructionLogo.PNG"
+            src="/stickBuildContent/stickBuildConstructionLogo_result.PNG"
             alt="Stick Build Construction"
             fill
             style={{ objectFit: 'contain', objectPosition: 'left center' }}

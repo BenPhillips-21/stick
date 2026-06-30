@@ -60,7 +60,7 @@ export default function Decks() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-center h-20">
           <Link href="/" className="relative flex items-center" style={{ height: 75, width: 220 }}>
             <NetlifyImage
-              src="/stickBuildContent/stickBuildConstructionLogo.PNG"
+              src="/stickBuildContent/stickBuildConstructionLogo_result.PNG"
               alt="Stick Build Construction"
               fill
               style={{ objectFit: 'contain', objectPosition: 'center' }}
@@ -94,7 +94,7 @@ export default function Decks() {
               <div className="flex gap-3 md:hidden">
                 <div className="flex-1 relative aspect-3/4 rounded-xl overflow-hidden">
                   <NetlifyImage
-                    src="/stickBuildContent/deckBefore.avif"
+                    src="/stickBuildContent/deckBefore_result.avif"
                     alt="Deck before restoration"
                     fill
                     preload
@@ -105,7 +105,7 @@ export default function Decks() {
                 </div>
                 <div className="flex-1 relative aspect-3/4 rounded-xl overflow-hidden">
                   <NetlifyImage
-                    src="/stickBuildContent/newAfter.avif"
+                    src="/stickBuildContent/newAfter_result.avif"
                     alt="Deck after restoration"
                     fill
                     preload
@@ -157,7 +157,7 @@ export default function Decks() {
             <div className="hidden md:flex flex-col gap-4">
               <div className="relative w-full aspect-3/4 rounded-2xl overflow-hidden shadow-2xl">
                 <NetlifyImage
-                  src="/stickBuildContent/deckBefore.avif"
+                  src="/stickBuildContent/deckBefore_result.avif"
                   alt="Deck before restoration"
                   fill
                   preload
@@ -168,7 +168,7 @@ export default function Decks() {
               </div>
               <div className="relative w-full aspect-3/4 rounded-2xl overflow-hidden shadow-2xl">
                 <NetlifyImage
-                  src="/stickBuildContent/newAfter.avif"
+                  src="/stickBuildContent/newAfter_result.avif"
                   alt="Deck after restoration"
                   fill
                   preload

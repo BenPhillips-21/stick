@@ -6,7 +6,7 @@ const images = [
   '/stickBuildContent/deckingAndPergolas/IMG_5498_result.avif',
   '/stickBuildContent/deckingAndPergolas/deck_result.avif',
   '/stickBuildContent/deckingAndPergolas/IMG_6067_result.avif',
-  '/stickBuildContent/deckAfter.avif',
+  '/stickBuildContent/newAfter_result.avif',
   '/stickBuildContent/deckingAndPergolas/IMG_5340_result.avif',
   '/stickBuildContent/b4Afters/afterVertical.avif',
   '/stickBuildContent/b4Afters/afterSquare.avif',
