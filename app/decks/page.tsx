@@ -97,6 +97,7 @@ export default function Decks() {
                     src="/stickBuildContent/deckBefore.avif"
                     alt="Deck before restoration"
                     fill
+                    preload
                     style={{ objectFit: 'cover', transform: 'scale(1.25)', transformOrigin: 'center' }}
                     sizes="45vw"
                   />
@@ -107,6 +108,7 @@ export default function Decks() {
                     src="/stickBuildContent/newAfter.avif"
                     alt="Deck after restoration"
                     fill
+                    preload
                     style={{ objectFit: 'cover' }}
                     sizes="45vw"
                   />
@@ -158,6 +160,7 @@ export default function Decks() {
                   src="/stickBuildContent/deckBefore.avif"
                   alt="Deck before restoration"
                   fill
+                  preload
                   style={{ objectFit: 'cover', transform: 'scale(1.15)', transformOrigin: 'center' }}
                   sizes="360px"
                 />
@@ -168,6 +171,7 @@ export default function Decks() {
                   src="/stickBuildContent/newAfter.avif"
                   alt="Deck after restoration"
                   fill
+                  preload
                   style={{ objectFit: 'cover' }}
                   sizes="360px"
                 />
