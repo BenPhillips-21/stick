@@ -136,6 +136,9 @@ export default function Decks() {
                     alt="Deck before restoration"
                     fill
                     preload
+                    fetchPriority="high"
+                    placeholder="blur"
+                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxyZWN0IHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiMzRDM4MzAiLz48L3N2Zz4="
                     style={{ objectFit: 'cover', transform: 'scale(1.25)', transformOrigin: 'center' }}
                     sizes="45vw"
                   />
@@ -147,6 +150,9 @@ export default function Decks() {
                     alt="Deck after restoration"
                     fill
                     preload
+                    fetchPriority="high"
+                    placeholder="blur"
+                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxyZWN0IHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiM4QjYyNDgiLz48L3N2Zz4="
                     style={{ objectFit: 'cover' }}
                     sizes="45vw"
                   />
@@ -204,6 +210,9 @@ export default function Decks() {
                   alt="Deck before restoration"
                   fill
                   preload
+                  fetchPriority="high"
+                  placeholder="blur"
+                  blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxyZWN0IHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiMzRDM4MzAiLz48L3N2Zz4="
                   style={{ objectFit: 'cover', transform: 'scale(1.12)', transformOrigin: 'center' }}
                   sizes="400px"
                 />
@@ -221,6 +230,9 @@ export default function Decks() {
                     alt="Deck after restoration"
                     fill
                     preload
+                    fetchPriority="high"
+                    placeholder="blur"
+                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxyZWN0IHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiM4QjYyNDgiLz48L3N2Zz4="
                     style={{ objectFit: 'cover' }}
                     sizes="400px"
                   />
