@@ -1,6 +1,8 @@
-[[edge_functions]]
-  function = "strip-query"
-  path = "/decks"
+[[redirects]]
+  from = "/decks"
+  to = "/decks"
+  status = 200
+  force = true
 
 [build]
   command = "npm run build"
