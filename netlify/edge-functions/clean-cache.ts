@@ -1,6 +1,4 @@
-import type { Config, Context } from "@netlify/edge-functions";
-
-export default async function handler(request: Request, context: Context) {
+export default async function handler(request: Request, context: { rewrite: (url: string | URL) => Response | Promise<Response> }) {
   const url = new URL(request.url);
 
   // No query params — nothing to do, pass through to CDN normally
@@ -18,6 +16,6 @@ export default async function handler(request: Request, context: Context) {
   return context.rewrite(cleanUrl.toString());
 }
 
-export const config: Config = {
+export const config = {
   path: "/decks",
 };
