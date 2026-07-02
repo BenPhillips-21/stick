@@ -11,7 +11,7 @@ export default function HeroCTA() {
       {/* Mobile: full-width button */}
       <button
         onClick={openModal}
-        className="md:hidden relative overflow-hidden w-full flex items-center justify-center gap-[9px] bg-burnt-orange text-white font-extrabold text-[18px] px-[22px] py-4 rounded-xl mt-[22px] hover:bg-soft-peach transition-colors shadow-[0_0_28px_6px_rgba(204,76,4,0.55)] hover:shadow-[0_0_40px_10px_rgba(204,76,4,0.7)]"
+        className="md:hidden relative overflow-hidden w-full flex items-center justify-center gap-[9px] bg-burnt-orange text-white font-extrabold text-[18px] px-[22px] py-4 rounded-xl mt-[16px] hover:bg-soft-peach transition-colors shadow-[0_0_28px_6px_rgba(204,76,4,0.55)] hover:shadow-[0_0_40px_10px_rgba(204,76,4,0.7)]"
       >
         <span className="relative z-10">Get My Free Quote</span>
         <svg className="relative z-10 w-[18px] h-[18px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
@@ -21,7 +21,7 @@ export default function HeroCTA() {
       </button>
 
       {/* Desktop: button */}
-      <div className="hidden md:flex mt-[30px]">
+      <div className="hidden md:flex mt-[22px]">
         <button
           onClick={openModal}
           className="relative overflow-hidden inline-flex items-center gap-[10px] bg-burnt-orange text-white font-extrabold text-[20px] px-[34px] py-[19px] rounded-xl hover:bg-soft-peach transition-colors shadow-[0_0_34px_8px_rgba(204,76,4,0.55)] hover:shadow-[0_0_44px_12px_rgba(204,76,4,0.7)]"
