@@ -10,6 +10,8 @@ import SectionTracker from './SectionTracker';
 import FreeQuoteNavButton from './FreeQuoteNavButton';
 import HeroCTA from './HeroCTA';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Deck Builders Melbourne | Building, Repair & Restoration | Stick Build Construction',
   description:
