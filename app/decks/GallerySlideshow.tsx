@@ -42,72 +42,84 @@ export default function GallerySlideshow() {
     window.gtag('event', 'gallery_navigated', { direction, ...(imageIndex !== undefined && { image_index: imageIndex }) });
   }
 
-  // Only keep 3 images in the DOM: current (visible), exiting (fading out), next (preloading)
   const nextIndex = (current + 1) % images.length;
   const toRender = new Set([current, nextIndex]);
   if (exiting !== null) toRender.add(exiting);
 
   return (
-    <div className="relative aspect-4/3 overflow-hidden rounded-xl bg-gray-200">
-      {images.map((src, i) => {
-        if (!toRender.has(i)) return null;
-        return (
-          <div
-            key={src}
-            className="absolute inset-0 transition-opacity duration-700"
-            style={{ opacity: i === current ? 1 : 0 }}
-          >
-            <NetlifyImage
-              src={src}
-              alt={`Deck and pergola Melbourne example ${i + 1}`}
-              fill
-              style={{ objectFit: 'cover' }}
-              sizes="(max-width: 1024px) 100vw, 800px"
-            />
-          </div>
-        );
-      })}
+    <>
+      {/* Feature image */}
+      <div className="relative aspect-16/10 rounded-2xl overflow-hidden shadow-[0_24px_50px_-22px_rgba(4,44,92,.45)]">
+        {images.map((src, i) => {
+          if (!toRender.has(i)) return null;
+          return (
+            <div
+              key={src}
+              className="absolute inset-0 transition-opacity duration-700"
+              style={{ opacity: i === current ? 1 : 0 }}
+            >
+              <NetlifyImage
+                src={src}
+                alt={`Deck and pergola Melbourne example ${i + 1}`}
+                fill
+                style={{ objectFit: 'cover' }}
+                sizes="(max-width: 1024px) 100vw, 800px"
+              />
+            </div>
+          );
+        })}
 
-      {/* Dot indicators */}
-      <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
-        {images.map((_, i) => (
+        {/* Bottom gradient scrim */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: 'linear-gradient(180deg, rgba(4,44,92,0) 55%, rgba(4,44,92,.55) 100%)' }}
+        />
+
+        {/* Arrows — top-right */}
+        <div className="absolute top-4 right-4 flex gap-2">
           <button
-            key={i}
             onClick={() => {
-              goTo(i);
-              trackNavigation('dot', i);
+              goTo((current - 1 + images.length) % images.length);
+              trackNavigation('prev');
             }}
-            className={`w-2 h-2 rounded-full transition-colors ${i === current ? 'bg-white' : 'bg-white/40'}`}
-            aria-label={`Go to image ${i + 1}`}
-          />
-        ))}
+            className="w-[38px] h-[38px] rounded-full bg-white/90 shadow flex items-center justify-center text-navy hover:bg-white transition-colors"
+            aria-label="Previous image"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={() => {
+              goTo((current + 1) % images.length);
+              trackNavigation('next');
+            }}
+            className="w-[38px] h-[38px] rounded-full bg-white/90 shadow flex items-center justify-center text-navy hover:bg-white transition-colors"
+            aria-label="Next image"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
       </div>
 
-      {/* Prev / Next */}
-      <button
-        onClick={() => {
-          goTo((current - 1 + images.length) % images.length);
-          trackNavigation('prev');
-        }}
-        className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 text-white flex items-center justify-center hover:bg-black/60 transition-colors"
-        aria-label="Previous image"
-      >
-        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-      <button
-        onClick={() => {
-          goTo((current + 1) % images.length);
-          trackNavigation('next');
-        }}
-        className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 text-white flex items-center justify-center hover:bg-black/60 transition-colors"
-        aria-label="Next image"
-      >
-        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
-    </div>
+      {/* Thumbnail filmstrip */}
+      <div className="flex gap-2.5 mt-3.5">
+        {images.map((src, i) => (
+          <button
+            key={src}
+            onClick={() => { goTo(i); trackNavigation('dot', i); }}
+            className={`relative flex-1 aspect-square rounded-[10px] overflow-hidden cursor-pointer transition-opacity outline-solid outline-[3px] -outline-offset-2
+              ${i === current
+                ? 'opacity-100 outline-burnt-orange'
+                : 'opacity-50 outline-transparent hover:opacity-80'}`}
+            aria-label={`Show image ${i + 1}`}
+          >
+            <NetlifyImage src={src} alt="" fill style={{ objectFit: 'cover' }} sizes="120px" />
+          </button>
+        ))}
+      </div>
+    </>
   );
 }
