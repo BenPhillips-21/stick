@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import DeckPergolaContactForm, { type FormFields, type FormStatus } from './DeckPergolaContactForm';
 
-const emptyFields: FormFields = { name: '', phone: '', email: '', message: '' };
+const emptyFields: FormFields = { name: '', phone: '', email: '', suburb: '', projectType: '', size: '', budget: '', timeline: '', ownership: '', message: '', gclid: '' };
 
 export default function DeckPergolaModal() {
   const [open, setOpen] = useState(false);
@@ -16,6 +16,8 @@ export default function DeckPergolaModal() {
         setFields(emptyFields);
         setFormStatus('idle');
       }
+      const gclid = new URLSearchParams(window.location.search).get('gclid') ?? '';
+      setFields(prev => ({ ...prev, gclid }));
       setShowExitConfirm(false);
       setOpen(true);
       window.gtag('event', 'quote_modal_opened');
@@ -69,7 +71,7 @@ export default function DeckPergolaModal() {
         )}
 
         <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-gray-100">
-          <h2 className="text-xl font-bold text-navy">Get Your Free Quote</h2>
+          <h2 className="text-xl font-bold text-navy">Get A Free Quote</h2>
           <button onClick={attemptClose} className="text-gray-400 hover:text-gray-600 transition-colors" aria-label="Close">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
               <path fillRule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />

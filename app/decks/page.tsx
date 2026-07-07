@@ -109,7 +109,7 @@ export default function Decks() {
 
               {/* H1 */}
               <h1 className="text-[36px] md:text-[58px] font-black text-white leading-[1.04] md:leading-[1.03] tracking-[-0.02em] m-0">
-                Your <span style={{ color: '#FF7F00' }}>Dream Deck</span>{' '}
+                Your <span style={{ color: '#FF7F00' }}>Premium Deck</span>{' '}
                 <span className="md:block">Built In{' '}
                   <span className="relative" style={{ color: '#FF7F00' }}>
                     72 Hours

@@ -11,7 +11,8 @@ export default function FreeQuoteNavButton() {
       onClick={handleClick}
       className="bg-burnt-orange text-white font-bold text-[13px] md:text-sm px-[15px] md:px-[18px] py-[9px] md:py-2.5 rounded-lg hover:bg-soft-peach transition-colors"
     >
-      Free Quote
+      <span className="md:hidden">Free Quote</span>
+      <span className="hidden md:inline">Get A Free Quote</span>
     </button>
   );
 }
